@@ -1,0 +1,116 @@
+.main-index {
+    display: flex;
+    flex-direction: column;
+    .section-1 {
+        margin: calc($margin * 3 / 2);
+        border-radius: $border-radius;
+        background-color: nth($text-color, 2);
+        width: 93%;
+        height: 20vh;
+
+        .img-1 img{
+            width: 105px;
+            height: 110px;
+            margin-top: 20px;
+            position: absolute;
+            left: 2px;
+        }
+
+        .texts {
+            text-align: center;
+            padding-top: 18px;
+            padding-left: 35px;
+        }
+
+        .img-2 img{
+            width: 90px;
+            height: 90px;
+            margin-top: 30px;
+            position: absolute;
+            right: 1px;
+        }
+
+    }
+   .section-2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .card {
+        margin: $margin;
+        padding: .8em;
+        background: #f5f5f5;
+        position: relative;
+        overflow: visible;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+       }
+
+       .card-div1 {
+        display: flex;
+       }
+       
+       .card-img {
+        margin-bottom: $margin;
+        background-color: #ffcaa6;
+        height: 100px;
+        width: 100px;
+        border-radius: .5rem;
+        transition: .3s ease;
+       }
+       
+       .card-info {
+        padding-top: 5%;
+        padding-left: 5%;
+       }
+       
+       svg {
+        width: 20px;
+        height: 20px;
+       }
+       
+       .card-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+       }
+       
+       /*Text*/
+       .text-title {
+        font-weight: 900;
+        font-size: 1.2em;
+        line-height: 1.5;
+       }
+       
+       .text-body {
+        font-size: .9em;
+        padding-bottom: 10px;
+       }
+       
+       /*Button*/
+       .card-button {
+        border: 1px solid #252525;
+        display: flex;
+        padding: .3em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .3s ease-in-out;
+       }
+       
+       /*Hover*/
+       .card-img:hover {
+        transform: translateY(-25%);
+        box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+       }
+       
+       .card-button:hover {
+        border: 1px solid #ffcaa6;
+        background-color: #ffcaa6;
+       }
+       
+   
+}

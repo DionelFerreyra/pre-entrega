@@ -1,0 +1,26 @@
+body {
+    h1 {
+        font-style: italic;
+        font-size: 50px;
+        color: nth($text-color, 2);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .menu-icon {
+            font-size: x-large;
+        }
+        .carrito-logo {
+            display: flex;
+            font-size: x-large;
+            
+            span {
+                display: none;
+            }
+        }
+    }
+    
+}

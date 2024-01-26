@@ -12,11 +12,25 @@ body {
 
         .menu-icon {
             font-size: x-large;
+            color: nth($text-color, 2);
+            transition: .3s ease;
+            
+            &:hover {
+                transform: scale(1.3);
+            }
+            &:active {
+                transform: scale(1.3);
+            }
         }
         .carrito-logo {
             display: flex;
             font-size: x-large;
+            color: nth($text-color, 2);
+            transition: .3s ease;
             
+            &:hover {
+                transform: scale(1.3);
+            }
             span {
                 display: none;
             }

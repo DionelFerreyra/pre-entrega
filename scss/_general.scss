@@ -1,19 +1,78 @@
+.body.overflow {
+        overflow: hidden;
+    }
 body {
-    h1 {
-        font-style: italic;
-        font-size: 50px;
-        color: nth($text-color, 2);
+    .logo {
+        @extend %logo;
     }
 
-    header {
+    .header.position {
+        position: inherit;
+    }
+    .header {
+        background-color: aliceblue;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        .nav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav {
+            opacity: 0;
+            visibility: hidden;
+            
+            padding: calc($padding * 2);
+            background-color: #2a2a2a;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            transition: all .3s;
+
+            p {
+                padding: calc($padding / 2);
+                border-radius: calc($border-radius * 4);
+            }
+
+            li {
+                margin: calc($padding * 4);
+
+                a {
+                    color: aliceblue;
+                    font-size: large;
+                    
+                    &:hover{
+                    color: nth($text-color, 2);
+                    }
+                }
+            }
+            
+            .iconos-redes{
+                text-align: center;
+                
+                a {
+                    padding: $padding;
+                    text-align: center;
+                    color: rgb(104, 104, 104);
+                    
+                }
+            }
+            
+        }
+        
 
         .menu-icon {
             font-size: x-large;
             color: nth($text-color, 2);
             transition: .3s ease;
+            cursor: pointer;
             
             &:hover {
                 transform: scale(1.3);
@@ -21,6 +80,21 @@ body {
             &:active {
                 transform: scale(1.3);
             }
+        }
+
+        .button-cerrar {
+            padding: calc($padding / 2);
+            border: 0;
+            border-bottom-right-radius: calc($border-radius / 2);
+            border-top-right-radius: calc($border-radius / 2);
+            font-size: 1.25rem;
+            background-color: rgba(253, 245, 230, 0.668);
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 181px;
+
         }
         .carrito-logo {
             display: flex;
@@ -31,8 +105,36 @@ body {
             &:hover {
                 transform: scale(1.3);
             }
-            span {
-                display: none;
+    
+        }
+    }
+    footer {
+        background-color: #2a2a2a;
+        margin-top: calc($margin / 2);
+        text-align: center;
+
+        p{
+            color: rgb(149, 149, 149);
+        }
+        
+        ul {
+            padding: $padding;
+
+            li {
+                padding: $padding;
+
+                a {
+                    color: rgb(194, 194, 194);
+                }
+            }
+        }
+
+        .iconos-redes {
+            padding: $padding;
+
+            a {
+                color: rgb(194, 194, 194);
+                padding: $padding;
             }
         }
     }

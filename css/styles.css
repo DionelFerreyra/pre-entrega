@@ -11,42 +11,160 @@ a {
   text-decoration: none;
 }
 
-ul {
+li {
   list-style-type: none;
 }
 
-body h1 {
-  font-style: italic;
-  font-size: 50px;
+body .logo {
   color: rgb(253, 41, 105);
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
 }
-body header {
+
+.facebook :hover {
+  color: #1877f2;
+  transform: scale(1.3);
+}
+
+.instagram :hover {
+  color: #c92394;
+  transform: scale(1.3);
+}
+
+.whatsapp :hover {
+  color: #00bf5f;
+  transform: scale(1.3);
+}
+
+.facebook :active {
+  color: #1877f2;
+}
+
+.instagram :active {
+  color: #c92394;
+}
+
+.whatsapp :active {
+  color: #00bf5f;
+}
+
+.body.overflow {
+  overflow: hidden;
+}
+
+body .header.position {
+  position: inherit;
+}
+body .header {
+  background-color: aliceblue;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-body header .menu-icon {
+body .header .nav.visible {
+  opacity: 1;
+  visibility: visible;
+}
+body .header .nav {
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  background-color: #2a2a2a;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.3s;
+}
+body .header .nav p {
+  padding: 5px;
+  border-radius: 40px;
+}
+body .header .nav li {
+  margin: 40px;
+}
+body .header .nav li a {
+  color: aliceblue;
+  font-size: large;
+}
+body .header .nav li a:hover {
+  color: rgb(253, 41, 105);
+}
+body .header .nav .iconos-redes {
+  text-align: center;
+}
+body .header .nav .iconos-redes a {
+  padding: 10px;
+  text-align: center;
+  color: rgb(104, 104, 104);
+}
+body .header .menu-icon {
   font-size: x-large;
   color: rgb(253, 41, 105);
   transition: 0.3s ease;
+  cursor: pointer;
 }
-body header .menu-icon:hover {
+body .header .menu-icon:hover {
   transform: scale(1.3);
 }
-body header .menu-icon:active {
+body .header .menu-icon:active {
   transform: scale(1.3);
 }
-body header .carrito-logo {
+body .header .button-cerrar {
+  padding: 5px;
+  border: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 1.25rem;
+  background-color: rgba(253, 245, 230, 0.668);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 181px;
+}
+body .header .carrito-logo {
   display: flex;
   font-size: x-large;
   color: rgb(253, 41, 105);
   transition: 0.3s ease;
 }
-body header .carrito-logo:hover {
+body .header .carrito-logo:hover {
   transform: scale(1.3);
 }
-body header .carrito-logo span {
-  display: none;
+body footer {
+  background-color: #2a2a2a;
+  margin-top: 5px;
+  text-align: center;
+}
+body footer p {
+  color: rgb(149, 149, 149);
+}
+body footer ul {
+  padding: 10px;
+}
+body footer ul li {
+  padding: 10px;
+}
+body footer ul li a {
+  color: rgb(194, 194, 194);
+}
+body footer .iconos-redes {
+  padding: 10px;
+}
+body footer .iconos-redes a {
+  color: rgb(194, 194, 194);
+  padding: 10px;
 }
 
 .main-index {
@@ -64,8 +182,8 @@ body header .carrito-logo span {
   height: 19vh;
 }
 .main-index .section-1 .img-1 img {
-  width: 105px;
-  height: 110px;
+  width: 100px;
+  height: 105px;
   margin-top: 20px;
   position: absolute;
   left: 2px;
@@ -73,6 +191,7 @@ body header .carrito-logo span {
 .main-index .section-1 .texts {
   text-align: center;
   padding-top: 18px;
+  padding-left: 30px;
   color: #f5f5f5;
 }
 .main-index .section-1 .img-2 img {
@@ -83,7 +202,46 @@ body header .carrito-logo span {
   right: 1px;
 }
 .main-index .section-2 h2 {
+  margin-top: 10px;
   padding-left: 10px;
+}
+.main-index .section-2 .categorias-ul {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main-index .section-2 .categorias-ul button {
+  width: 75px;
+  height: 25px;
+  border: 2px solid rgb(253, 41, 105);
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 0.8em;
+  font-weight: 550;
+  font-family: "Montserrat", sans-serif;
+}
+.main-index .section-2 .categorias-ul button:hover {
+  background: rgb(253, 41, 105);
+  color: white;
+  font-size: 0.9em;
+}
+.main-index .section-2 .categorias-ul button:active {
+  transform: scale(1.1);
+}
+.main-index .section-2 .categorias-ul button img {
+  width: 15px;
+  height: 15px;
+}
+.main-index .section-2 .categorias-ul .active {
+  background: rgb(253, 41, 105);
+  color: #ddd;
 }
 .main-index .card {
   margin: 10px;
@@ -116,8 +274,8 @@ body header .carrito-logo span {
   padding-left: 5%;
 }
 .main-index svg {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .main-index .card-footer {
   width: 100%;
@@ -155,11 +313,15 @@ body header .carrito-logo span {
   border: 1px solid #ffcaa6;
   background-color: #ffcaa6;
 }
+.main-index .button-comprar {
+  background-color: transparent;
+  border: none;
+}
 
 .main-carrito {
   margin: 10px;
 }
-.main-carrito .p-carrito-vacio {
+.main-carrito .disable {
   display: none;
 }
 .main-carrito .carrito-productos {
@@ -218,7 +380,7 @@ body header .carrito-logo span {
 .main-carrito .contenedor-resumen {
   margin-top: 10px;
   padding: 10px;
-  background-color: #e3f6ff;
+  background-color: #e8f6fd;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

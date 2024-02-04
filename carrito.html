@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="menu-icon">
+    <header id="header" class="header">
+        <div class="menu-icon" id="abrir">
             <ion-icon name="grid-outline"></ion-icon>
         </div>
+        <nav id="nav" class="nav">
+            <p class="logo">Isabella</p>
+            <button id="cerrar" class="button-cerrar">x</button>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Sabores</a></li>
+                <li><a href="">Helados</a></li>
+                <li><a href="">nosotros</a></li>
+            </ul>
+            <div class="iconos-redes">
+                <a href="" class="logofacebook facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" class="logoinstagram instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="logowhatsapp whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </div>
+        </nav>
         <a href="index.html">
-            <h1>Isabella</h1>
+            <h1 class="logo">Isabella</h1>
         </a>
-        <a href="#" class="carrito-logo">
+        <a href="carrito.html" class="carrito-logo">
             <ion-icon name="cart-outline"></ion-icon>
-            <span>0</span>
+            <span id="cantidad-agregados" class="cantidad">0</span>
         </a>
     </header>
     <main class="main-carrito">
         <section class="contenedor-carrito">
             <h2>Carrito</h2>
             <p class="p-carrito-vacio">Tu carrito está vacio.</p>
-            <div class="carrito-productos">
+            <div class="carrito-productos disable">
                 <div class="carrito-producto">
                     <img src="img/6341b763a6428.jpg" alt="">
                     <div class="carrito-producto-titulo">
@@ -42,7 +57,7 @@
                     </button>
                 </div>
             </div>
-            <div class="carrito-productos">
+            <div class="carrito-productos disable">
                 <div class="carrito-producto">
                     <img src="" alt="">
                     <div class="carrito-producto-titulo">
@@ -61,7 +76,7 @@
                     </button>
                 </div>
             </div>
-            <div class="contenedor-resumen">
+            <div class="contenedor-resumen disable">
                 <h3>Resumen</h3>
                 <div class="resumen-precios">
                     <div>
@@ -79,10 +94,29 @@
                     <button class="carrito-acciones-comprar">Compra ahora</button>
                 </div>
             </div>
+            <p class="carrito-comprado disable">Muchas gracias por tu compra</p>
         </section>
     </main>
     <footer>
-        <p>© 2024 isabella</p>
+        <div>
+            <p class="logo">Isabella</p>
+            <p>© 2024 isabella</p>
+            <p>Todos  los derechos reservados</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Sabores</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            
+            <p>Seguinos</p>
+            <div class="iconos-redes">
+                <a href="" class="logofacebook facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" class="logoinstagram instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="logowhatsapp whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </div>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="javascript/main.js"></script>

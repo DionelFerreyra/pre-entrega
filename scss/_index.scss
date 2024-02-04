@@ -9,8 +9,8 @@
         height: 19vh;
 
         .img-1 img{
-            width: 105px;
-            height: 110px;
+            width: 100px;
+            height: 105px;
             margin-top: 20px;
             position: absolute;
             left: 2px;
@@ -19,6 +19,7 @@
         .texts {
             text-align: center;
             padding-top: 18px;
+            padding-left: 30px;
             color: #f5f5f5;
         }
 
@@ -34,7 +35,57 @@
     .section-2 {
     
         h2 {
+            margin-top: $margin;
             padding-left: $padding;
+        }
+
+        .categorias-ul {
+            margin-top: $margin;
+            margin-bottom: calc($margin * 3);
+            padding: $padding;
+            display: flex;
+            justify-content: space-evenly;
+
+
+            button {
+                width: 75px;
+                height: 25px;
+                border: 2px solid nth($text-color, 2);
+                border-radius: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s;
+                cursor: pointer;
+                background: white;
+                font-size: 0.8em;
+                font-weight: 550;
+                font-family: 'Montserrat', sans-serif;
+
+                &:hover{
+                    background: nth($text-color, 2);
+                    color: white;
+                    font-size: 0.9em;
+                }
+
+                &:active{
+                    transform: scale(1.1);
+                }
+
+                
+
+                img {
+                    width: 15px;
+                    height: 15px;
+
+                }
+                
+                
+            }
+            .active{
+                    background: nth($text-color, 2);
+                    color: #ddd;
+            }
         }
     }
 
@@ -75,8 +126,8 @@
     }
        
     svg {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
        
     .card-footer {
@@ -125,5 +176,9 @@
         background-color: #ffcaa6;
     }
        
+    .button-comprar {
+        background-color: transparent;
+        border: none;
+    }
    
 }

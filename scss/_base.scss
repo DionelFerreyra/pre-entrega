@@ -11,12 +11,12 @@ a {
     text-decoration: none;
 }
 
-ul {
+li {
     list-style-type: none;
 }
 
 
-//  margin, padding, border de cajas
+// margin, padding y border de cajas
 
 $margin: 10px;
 
@@ -24,8 +24,178 @@ $padding: 10px;
 
 $border-radius: 10px;
 
-//    colores del sitio
+// colores del sitio
+
+$background-color:
+rgba(17, 17, 17, 0.900)
+rgb(253, 41, 105)
+rgb(205, 205, 205)
+aliceblue
+rgb(219, 236, 250);
+
+$border-color:
+aliceblue
+black
+rgb(0, 143, 98);
 
 $text-color:
-black
-rgb(253, 41, 105);
+rgb(0, 143, 98),
+rgb(253, 41, 105),
+rgb(180, 180, 180),
+rgb(255, 255, 255);
+
+$boton-color:
+rgb(0, 143, 98);
+
+
+
+// size y color de los iconos
+
+$font-size: 20px;
+
+$color-a:rgb(0, 143, 98);
+
+$active: rgb(74, 255, 198);
+
+$hover: rgb(0, 143, 98);
+
+$color-outline:rgb(74, 255, 198);
+
+// size fuente y estilo de text
+
+$size-text: xx-large;
+
+$font-style: italic;
+
+$family-a: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+$family-h1: "Null", sans-serif;
+
+$family-h2: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+$family-h3: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+$family-p: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
+// h1 y subtitulos
+
+%logo {
+    color: nth($text-color, 2);
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+// positions header y nav
+
+%position {
+    position: sticky;
+    top: 2%;
+}
+
+// flex
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+// etiquetas semanticas y forms
+
+%forms-input {
+    outline-color: $color-outline;
+    border: none;
+    border-radius: $border-radius*5;
+}
+
+%padding{
+    padding: 5px 15px;
+}
+
+@mixin container ($color, $width, $height){
+    background-color: $color;
+    width: $width;
+    height: $height;
+}
+
+@mixin margin-padding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin display ($display, $wrap, $direction, $aling-content, $justify, $aling-items){
+    display: $display;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    align-content: $aling-content;
+    justify-content: $justify;
+    align-items: $aling-items;
+}
+
+// active y hover de iconos de redes sociales
+
+$colors-icons-seguinos: (
+    facebook: #1877f2,
+    instagram:#c92394,
+    whatsapp: #00bf5f,
+);
+
+@each $icon-colors-redes, $colors-icons-redes in $colors-icons-seguinos {
+    .#{$icon-colors-redes}{
+        :hover{
+            color: $colors-icons-redes;
+            transform: scale(1.3);
+        }
+    }
+}
+@each $icon-colors-redes, $colors-icons-redes in $colors-icons-seguinos {
+    .#{$icon-colors-redes}{
+        :active{
+            color: $colors-icons-redes;
+        }
+    }
+}
+
+
+//   media queries 
+
+@mixin tablet-horizontal {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+@mixin tablet-vertical-max {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin tablet-vertical-min {
+    @media screen and (min-width: 769px) {
+        @content;
+    }
+}
+@mixin tablet-chica-vertical {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+@mixin mobile-horizontal {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+@mixin mobile-vertical {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}

@@ -6,17 +6,32 @@
     <title>Isabella - helados </title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <div class="menu-icon">
+<body id="body" class="body">
+    <header id="header" class="header">
+        <div class="menu-icon" id="abrir">
             <ion-icon name="grid-outline"></ion-icon>
         </div>
+        <nav id="nav" class="nav">
+            <p class="logo">Isabella</p>
+            <button id="cerrar" class="button-cerrar">x</button>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Sabores</a></li>
+                <li><a href="">Helados</a></li>
+                <li><a href="">nosotros</a></li>
+            </ul>
+            <div class="iconos-redes">
+                <a href="" class="logofacebook facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" class="logoinstagram instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="logowhatsapp whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </div>
+        </nav>
         <a href="#">
-            <h1>Isabella</h1>
+            <h1 class="logo">Isabella</h1>
         </a>
         <a href="carrito.html" class="carrito-logo">
             <ion-icon name="cart-outline"></ion-icon>
-            <span>0</span>
+            <span id="cantidad-agregados" class="cantidad">0</span>
         </a>
     </header>
     <main class="main-index">
@@ -33,95 +48,40 @@
             </div>
         </section>
         <section class="section-2">
-            <h2>Hace tu pedido</h2>
-            <div class="card">
-                <div class="card-div1">
-                    <div class="card-img">
-                        <img src="img/6341b763a6428.jpg" alt="">
-                    </div>
-                    <div class="card-info">
-                        <p class="text-title">Producto title</p>
-                        <p class="text-body">Producto description</p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <span class="card-precio">$499.49</span>
-                    <div class="card-button">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                            <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                            <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                        </svg>
-                    </div>
-                </div> 
+            <h2 class="subtitulo" id="subtitulo">Helados</h2>
+            <div class="div-ul">
+                <ul class="categorias-ul">
+                    <li><button id="todos" class="button-categories">todos</button></li>
+                    <li><button id="conos" class="button-categories"><img src="img/580b57fcd9996e24bc43c1b6.png" alt="">Conos</button></li>
+                    <li><button id="potes" class="button-categories"><img src="img/1-kg-de-helado.png" alt="">Potes</button></li>
+                    <li><button id="sabores" class="button-categories"><img src="img/580b57fcd9996e24bc43c1b8.png" alt="">Sabores</button></li>
+                </ul>
             </div>
-            <div class="card">
-                <div class="card-div1">
-                    <div class="card-img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="card-info">
-                        <p class="text-title">Producto title</p>
-                        <p class="text-body">Producto description</p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <span class="card-precio">$499.49</span>
-                    <div class="card-button">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                            <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                            <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                        </svg>
-                    </div>
-                </div> 
-            </div>
-            <div class="card">
-                <div class="card-div1">
-                    <div class="card-img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="card-info">
-                        <p class="text-title">Producto title</p>
-                        <p class="text-body">Producto description</p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <span class="card-precio">$499.49</span>
-                    <div class="card-button">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                            <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                            <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                        </svg>
-                    </div>
-                </div> 
-            </div>
-            <div class="card">
-                <div class="card-div1">
-                    <div class="card-img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="card-info">
-                        <p class="text-title">Producto title</p>
-                        <p class="text-body">Producto description</p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <span class="card-precio">$499.49</span>
-                    <div class="card-button">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
-                            <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
-                            <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
-                        </svg>
-                    </div>
-                </div> 
+            <div id="contenedor-productos" class="contenedor-productos">
+                    <!-- js -->
             </div>
         </section>
     </main>
     <footer>
-        <p>© 2024 isabella</p>
+        <div>
+            <p class="logo">Isabella</p>
+            <p>© 2024 isabella</p>
+            <p>Todos  los derechos reservados</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Sabores</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            
+            <p>Seguinos</p>
+            <div class="iconos-redes">
+                <a href="" class="logofacebook facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" class="logoinstagram instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="logowhatsapp whatsapp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </div>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="javascript/main.js"></script>

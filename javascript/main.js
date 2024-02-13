@@ -164,6 +164,7 @@ const productosEnCarritoLs = JSON.parse(localStorage.getItem("productos-en-carri
 
 if (productosEnCarritoLs) {
     productosEnCarrito = productosEnCarritoLs;
+    actualizarCantidadCarrito();
 } else {
     productosEnCarrito = [];
 }
@@ -194,4 +195,3 @@ function actualizarCantidadCarrito() {
     
 }
 
-console.log(productosEnCarrito);

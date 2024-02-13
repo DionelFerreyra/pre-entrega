@@ -158,8 +158,15 @@ function actualizarButtonAgregar() {
 }
 
 // carrtio 
+let productosEnCarrito;
 
-const productosEnCarrito = [];
+const productosEnCarritoLs = JSON.parse(localStorage.getItem("productos-en-carrito"));
+
+if (productosEnCarritoLs) {
+    productosEnCarrito = productosEnCarritoLs;
+} else {
+    productosEnCarrito = [];
+}
 
 // agregar productos al carrito y almacenarlos en el localstorage
 function agregaralCarrito(e) {
@@ -186,3 +193,5 @@ function actualizarCantidadCarrito() {
     cantidadAgregado.innerText = nuevoCantidadAgregado;
     
 }
+
+console.log(productosEnCarrito);
